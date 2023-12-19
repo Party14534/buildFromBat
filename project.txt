@@ -1,5 +1,5 @@
 compiler=g++
-flag=-Wall
+flag=Wall
 includeDirectory=C:\SFML-2.6.0\include
 libraryDirectory=C:\SFML-2.6.0\lib
 library=sfml-graphics 

@@ -26,7 +26,7 @@ int createFile(Directory& parentDirectory, CompileInfo& info, std::string name) 
 
         if(info.flags.size()) {
           for(const auto& flag : info.flags) {
-            buildFile << flag << " ";
+            buildFile << "-" << flag << " ";
           }
         }
 
