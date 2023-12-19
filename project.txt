@@ -1,0 +1,7 @@
+compiler=g++
+flag=-Wall
+includeDirectory=C:\SFML-2.6.0\include
+libraryDirectory=C:\SFML-2.6.0\lib
+library=sfml-graphics 
+library=sfml-window 
+library=sfml-system
