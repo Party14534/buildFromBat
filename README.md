@@ -41,7 +41,7 @@ BuildFromBat has primarily been tested and designed for use with the `g++` compi
 **Note:** The tool's functionalities and configurations are optimized for `g++`, and compatibility with other compilers might require adjustments or modifications to suit their specific requirements. Testing and modifications may be necessary to adapt BuildFromBat for use with compilers other than `g++`.
 
 ## TODO
-  I plan to continuously improveme and expansion this project to improve my skills as a programmer. Planned updates include:
+  I plan to continuously improve and expand this project to improve my skills as a programmer. Planned updates include:
 
   - **Extended Compiler Support:** Future updates will introduce support for additional compilers like `cl`, `gcc`, `clang`, and various other popular compilers, enhancing the tool's compatibility and versatility.
 
