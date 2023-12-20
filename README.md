@@ -8,7 +8,7 @@ Leveraging the capabilities of std::filesystem and std::ifstream, this project m
 ## How to use
 - **Run from Project's Root Directory:** Execute this tool from the highest-level directory of your project, the root directory.
 - **Prepare 'project.txt':** Ensure there's a 'project.txt' file within the directory. This file should detail essential information like compiler flags, required libraries, and other configurations necessary for your project's successful build.
-  - *Note*: If 'project.txt' isn't found in the execution directory, the tool will search for it in directory that contains BuildFromBat.
+  - *Note*: If 'project.txt' isn't found in the execution directory, the tool will search for it in the directory that contains BuildFromBat.
 - **Automated Build Setup:** BuildFromBat simplifies the process by creating a 'build' folder in the current directory if it doesn't exist already. It generates a .bat file within this folder. The resulting .bat file compiles the executable and places it into the 'build' folder for convenient access.
 
 ## Arguments
