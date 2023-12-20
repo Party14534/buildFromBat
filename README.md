@@ -44,6 +44,9 @@ BuildFromBat has primarily been tested and designed for use with the `g++` compi
 ## TODO
   I plan to continuously improve and expand this project to improve my skills as a programmer. Planned updates include:
 
+  - **Custom Include Paths:** Upcoming updates will introduce the capability to include specific system paths, enabling their inclusion and search within the build file.
+    - **Intended Use:** This feature aims to facilitate the inclusion of directories within your primary project. It will assist in scenarios where separate executable compilations within the project require files from sibling directories for compilation.
+
   - **Extended Compiler Support:** Future updates will introduce support for additional compilers like `cl`, `gcc`, `clang`, and various other popular compilers, enhancing the tool's compatibility and versatility.
 
   - **Expansion to Other Languages:** Long-term objectives involve extending support beyond C++ to encompass other compiled programming languages such as `C` and `Java`, broadening the tool's utility and applicability across diverse development environments.
