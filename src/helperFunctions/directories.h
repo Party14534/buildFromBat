@@ -1,7 +1,10 @@
 #include <iostream>
 #include <filesystem>
 #include <vector>
+#include <algorithm>
 #include <memory>
+
+bool inExcludes(std::vector<std::string>&, std::string);
 
 struct File {
   std::filesystem::path name;
@@ -18,6 +21,6 @@ struct Directory {
   void addChildDirectory(std::filesystem::path childDirectory);
   void addChildFile(std::filesystem::path name, std::filesystem::path path);
   void printDirectory(int indent = 0);
-  int fillSelf();
+  int fillSelf(std::vector<std::string>& excludes);
   std::vector<std::string> getAllFiles();
 };

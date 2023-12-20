@@ -34,16 +34,16 @@ void Directory::printDirectory(int indent) {
   }
 }
 
-int Directory::fillSelf() {
+int Directory::fillSelf(std::vector<std::string>& excludes) {
 
   // Check if the path is correct
   if(std::filesystem::exists(path) && std::filesystem::is_directory(path)) {
     // Iterate through directory
     for(const auto& entry : std::filesystem::directory_iterator(path)) {
       if(std::filesystem::is_directory(entry)) {
-        addChildDirectory(entry.path());
+        if(!inExcludes(excludes, entry.path().filename().string())) addChildDirectory(entry.path());
       } else if (std::filesystem::is_regular_file(entry)) {
-        addChildFile(entry.path().filename(), entry.path());
+        if(!inExcludes(excludes, entry.path().filename().string())) addChildFile(entry.path().filename(), entry.path());
       }
     }
 
@@ -53,7 +53,7 @@ int Directory::fillSelf() {
   }
 
   for(const auto& dir : directories) {
-    dir->fillSelf();
+    dir->fillSelf(excludes);
   }
 
   return 0;
@@ -77,3 +77,11 @@ std::vector<std::string> Directory::getAllFiles() {
 
 // Files
 File::File(std::filesystem::path name, std::filesystem::path path) : name(name), path(path) { }
+
+bool inExcludes(std::vector<std::string>& excludes, std::string filename) {
+  for(const std::string& exclude : excludes) {
+    if(filename == exclude) return true;
+  }
+
+  return false;
+}

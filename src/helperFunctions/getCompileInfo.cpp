@@ -28,6 +28,7 @@ CompileInfo::CompileInfo(std::string fileLocation) {
     else if(pair.first == "includeDirectory") { for(const auto& iD : pair.second) includeDirectories.push_back(iD); }
     else if(pair.first == "libraryDirectory") { for(const auto& lD : pair.second) libraryDirectories.push_back(lD); }
     else if(pair.first == "library") { for(const auto& l : pair.second) libraries.push_back(l); }
+    else if(pair.first == "exclude") { for(const auto& e : pair.second) excludes.push_back(e); }
   }
 
 }

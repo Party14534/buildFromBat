@@ -1,7 +1,11 @@
 compiler=g++
 flag=Wall
 includeDirectory=C:\SFML-2.6.0\include
+includeDirectory=C:\Program Files\boost\boost_1_82_0
 libraryDirectory=C:\SFML-2.6.0\lib
 library=sfml-graphics 
 library=sfml-window 
 library=sfml-system
+exclude=build
+exclude=.git
+exclude=README_files

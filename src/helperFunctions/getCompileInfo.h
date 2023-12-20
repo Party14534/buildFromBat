@@ -11,6 +11,7 @@ struct CompileInfo {
   std::vector<std::string> includeDirectories;
   std::vector<std::string> libraryDirectories;
   std::vector<std::string> libraries;
+  std::vector<std::string> excludes;
 
   CompileInfo(std::string fileLocation);
 };

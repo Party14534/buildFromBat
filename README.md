@@ -32,6 +32,7 @@ Every key except compiler excepts multiple occurrences in the `project.txt` file
 - **includeDirectory:** Denotes the project's include directories. Example: includeDirectory=C:\path\to\folder\include
 - **libraryDirectory:** Specifies directories containing project libraries. Example: libraryDirectory=C:\path\to\folder\lib
 - **library:** Identifies libraries utilized by the compiler during the build. Example: library=Gl
+- **exclude:** Identifies directories or files that should not be added to the build file. Example: exclude=build
 
 Using this format in the project.txt file ensures proper parsing and interpretation by BuildFromBat, allowing for clear and customizable project configurations.
 
