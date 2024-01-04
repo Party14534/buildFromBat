@@ -33,6 +33,8 @@ Every key except compiler excepts multiple occurrences in the `project.txt` file
 - **libraryDirectory:** Specifies directories containing project libraries. Example: libraryDirectory=C:\path\to\folder\lib
 - **library:** Identifies libraries utilized by the compiler during the build. Example: library=Gl
 - **exclude:** Identifies directories or files that should not be added to the build file. Example: exclude=build
+- **system:** Identifies which system the user is using, currently the only
+  system variable accepted is unix. Example: system=unix
 
 Using this format in the project.txt file ensures proper parsing and interpretation by BuildFromBat, allowing for clear and customizable project configurations.
 

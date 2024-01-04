@@ -1,4 +1,5 @@
 #include "createBat.h"
+#include <cstdlib>
 
 int createFile(Directory& parentDirectory, CompileInfo& info, std::string name) {
 
@@ -15,8 +16,11 @@ int createFile(Directory& parentDirectory, CompileInfo& info, std::string name) 
     // return error if you cannot create a directory
     if(createDirectory(buildPath)) return 1; 
   }
+  
+  std::string fileType = ".bat";
+  if(info.system == "unix") fileType = ".sh";
 
-  std::string filename = buildPath.filename().string() + "/build.bat";
+  std::string filename = buildPath.filename().string() + "/build" + fileType;
 
   std::ofstream buildFile(filename);
 
@@ -41,12 +45,15 @@ int createFile(Directory& parentDirectory, CompileInfo& info, std::string name) 
             buildFile << "-L\""<< lDir << "\" ";
           }
         }
+        
+        std::string newlineChar = "^";
+        if(info.system == "unix") newlineChar = "\\";
 
-        buildFile << "^\n";
+        buildFile << newlineChar + "\n";
 
         std::vector<std::string> paths = parentDirectory.getAllFiles();
         for(const auto& path : paths) {
-          buildFile << path + " ^\n";
+          buildFile << path + " " + newlineChar + "\n";
         }
 
         buildFile << "-o build/" + name + " ";
