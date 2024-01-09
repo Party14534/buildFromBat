@@ -25,7 +25,7 @@ BuildFromBat interprets the `project.txt` file using key-value pairs, separated 
 
 - **Each Key on a New Line**: Ensure each key-value pair resides on a separate line within the project.txt file.
 
-Every key except compiler excepts multiple occurrences in the `project.txt` file:
+Every key except compiler accepts multiple occurrences in the `project.txt` file:
 
 - **compiler:** Specifies the compiler invoked by the build process. Example: compiler=g++
 - **flag:** Indicates additional compiler flags required for the build. Example: flag=Wall
